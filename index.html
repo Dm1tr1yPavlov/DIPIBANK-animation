@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIPI BANK</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-content">
+      <div class="flex items-center gap-2">
+        <img src="./img/logo.png" alt="logo" class="w-12 h-12" style="filter:brightness(1.4)">
+        <span class="font-bold tracking-wide text-sm md:text-base">DIPI BANK</span>
+      </div>
+
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">Главная</a>
+        <a href="index.html">О нас</a>
+        <a href="index.html">Безопасность</a>
+      </nav>
+
+      <div class="nav-btns">
+        <a href="index.html" class="text-xs md:text-sm">Зарегистрироваться</a>
+        <a href="index.html" class="nav-accent text-xs md:text-sm">Войти</a>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="scroll-element px-4 md:px-0 py-14 md:py-20 max-w-6xl mx-auto w-full mt-16">
+    <div class="hero-inner flex gap-12">
+      <div class="flex-1 flex flex-col justify-center max-w-xl">
+        <h1 class="text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold mb-3 leading-[1.24]">
+          <span id="typed-text"></span><br>
+          <span id="typed-subtitle" class="font-normal block mt-2"></span>
+        </h1>
+        <p class="text-[#b3b3b7] text-base font-normal mb-2 mt-2 max-w-lg">Миссия DIPI BANK — предоставлять комплексные бизнес-решения, помогающие частным лицам и компаниям совершенствовать свои финансовые возможности. Гибкие счета, удобство управления, передовые технологии и поддержка экспертов, чтобы рост потребностей наших клиентов не знал границ и не терял уверенности.</p>
+        <button class="btn-accent mt-5 mb-2 w-max ripple-button" id="openModal1Btn">Войти в аккаунт</button>
+      </div>
+      <div class="flex-1 flex items-center justify-center">
+        <div class="section-card shadow-card p-7 w-full max-w-[370px] relative" style="background:#181818;">
+          <img src="./img/preview.png" alt="card ui" class="rounded-xl w-full">
+        </div>
+      </div>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="modal1">&times;</span>
+        <h2 class="text-xl font-bold mb-4">Вам есть 18 лет?</h2>
+        <p class="mb-6">Если вы не достигли возраста 18 лет, вы не можете продолжить.</p>
+        <div class="modal-buttons">
+          <button class="btn-accent w-full mb-3 ripple-button" id="openModal2Btn">Мне уже 18 лет или более</button>
+          <a href="index.html" class="btn-secondary w-full text-center">Мне нет 18 лет</a>
+        </div>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="modal2">&times;</span>
+        <form class="birth-form" id="birthForm">
+          <h2 class="text-xl font-bold mb-4">Подтвердите возраст</h2>
+          <label for="birthdate">Дата рождения:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+          <button type="submit" class="btn-accent w-full ripple-button">Продолжить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="scroll-element pt-12 pb-7 md:py-16 bg-[#1A1A1A]/10 w-full">
+    <div class="max-w-6xl mx-auto w-full px-4">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-7">
+        <div>
+          <h2 class="text-xl md:text-2xl font-bold mb-1">Наши продукты</h2>
+          <p class="text-[#b3b3b7] text-sm md:text-base">Откройте для себя революционные и настраиваемые банковские продукты DIPI BANK, разработанные с учетом ваших уникальных финансовых потребностей и стремлений.</p>
+        </div>
+        <div class="switcher mt-4 md:mt-0">
+          <button class="active" id="btnPersonal">Для частных лиц</button>
+          <button id="btnBusiness">Для бизнеса</button>
+        </div>
+      </div>
+      <div class="products-grid grid md:grid-cols-3 gap-7" id="personal">
+        <div class="feature-card">
+          <div class="icon-card"><span><img src="./img/b.png" alt=""></span></div>
+          <h3 class="font-bold mb-1">Расчетные счета</h3>
+          <p class="text-[#b3b3b7] text-sm">Наслаждайтесь простым и удобным доступом к своим средствам с помощью наших расчётных счетов. Воспользуйтесь такими функциями, как онлайн- и мобильный банкинг, дебетовые карты и бесплатный доступ к банкоматам.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-card"><span><img src="./img/t.png" alt=""></span></div>
+          <h3 class="font-bold mb-1">Сберегательные счета</h3>
+          <p class="text-[#b3b3b7] text-sm">Создавайте сбережения, используя наши конкурентоспособные процентные ставки и гибкие условия сберегательных счетов. Независимо от того, копите ли вы на конкретную цель или хотите постепенно приумножить свое состояние, у нас найдется подходящий для вас счет.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-card"><span><img src="./img/c.png" alt=""></span></div>
+          <h3 class="font-bold mb-1">Кредиты и ипотека</h3>
+          <p class="text-[#b3b3b7] text-sm">Воплотите свои мечты в реальность с нашими гибкими вариантами кредитования и ипотеки. Наши опытные кредитные специалисты помогут вам на всех этапах оформления заявки — от потребительских кредитов до ипотечных кредитов на недвижимость.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scroll-element py-14 md:py-20 w-full">
+    <div class="max-w-6xl mx-auto w-full px-4">
+      <h2 class="text-xl md:text-2xl font-bold mb-1" style="color:var(--accent)">Варианты использования</h2>
+      <p class="text-[#b3b3b7] text-sm mb-7">В Dipi Bank мы удовлетворяем разнообразные потребности частных лиц и предприятий, предлагая широкий спектр финансовых решений.</p>
+      <div class="usage-row grid md:grid-cols-2 gap-10 mb-10">
+        <img src="./img/left card.png" alt="" class="w-full">
+        <div class="flex flex-col justify-between section-card p-7">
+          <h3 class="text-lg font-semibold mb-2">Для частных лиц</h3>
+          <p class="text-[#b3b3b7] text-sm mb-4">DIPI BANK предоставляет частным лицам современные инструменты для управления личными финансами, накопления и инвестирования, а также выгодные кредитные и ипотечные решения. Более 91% клиентов рекомендуют нас своим близким.</p>
+          <div class="grid grid-cols-3 gap-3 mb-4">
+            <div class="stat">
+              <span class="value" data-target="78">0%</span>
+              <span class="caption">Довольны</span>
+            </div>
+            <div class="stat">
+              <span class="value" data-target="63">0%</span>
+              <span class="caption">Используют для долгов</span>
+            </div>
+            <div class="stat">
+              <span class="value" data-target="91">0%</span>
+              <span class="caption">Рекомендуют</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usage-row grid md:grid-cols-2 gap-10">
+        <div class="flex flex-col justify-between section-card p-7 order-2 md:order-1">
+          <h3 class="text-lg font-semibold mb-2">Для бизнеса</h3>
+          <p class="text-[#b3b3b7] text-sm mb-4">Наши платежные системы, счета, продукты кредитования и поддержки обработки платежей позволяют бизнесу расти, принимать решения под потребности оборотного капитала, расширять штат и оптимизировать издержки. YourBank предлагает гибкие инструменты и индивидуальные интеграции, чтобы успех был для вас доступен.</p>
+          <div class="grid grid-cols-3 gap-3 mb-4">
+            <div class="stat">
+              <span class="value" data-target="65">0%</span>
+              <span class="caption">Увеличение потока</span>
+            </div>
+            <div class="stat">
+              <span class="value" data-target="70">0%</span>
+              <span class="caption">Расширение бизнеса</span>
+            </div>
+            <div class="stat">
+              <span class="value" data-target="45">0%</span>
+              <span class="caption">Оптимизация расходов</span>
+            </div>
+          </div>
+        </div>
+        <img src="./img/right card.png" alt="" class="w-full order-1 md:order-2">
+      </div>
+
+      <div class="section-card scroll-element bg-[#181818] mt-12 p-7 text-center flex flex-col items-center">
+        <span class="text-white text-base font-medium mb-2 flex flex-col md:flex-row items-center gap-4">Начните свое финансовое путешествие с DIPI BANK уже сегодня!<button class="btn-call ripple-button mt-3 md:mt-0">Открыть аккаунт</button></span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#181818] mt-12 pt-14 pb-7">
+    <div class="max-w-6xl mx-auto w-full px-4">
+      <div class="footer-grid flex justify-between items-start gap-9 flex-wrap">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="./img/logo.png" alt="logo" class="w-6 h-6" style="filter:brightness(1.4)">
+            <span class="font-bold">DIPI BANK</span>
+          </div>
+          <nav class="flex gap-7 mb-4">
+            <a href="#" class="text-white hover:text-[var(--accent)] text-sm">Главная</a>
+            <a href="#" class="text-white hover:text-[var(--accent)] text-sm">О нас</a>
+            <a href="#" class="text-white hover:text-[var(--accent)] text-sm">Безопасность</a>
+          </nav>
+          <div class="footer-socials flex gap-3 mb-2 mt-3">
+            <a href="#" title="Telegram"><img src="./img/tg.png" alt=""></a>
+            <a href="#" title="Facebook"><img src="./img/fac.png" alt=""></a>
+            <a href="#" title="Instagram"><img src="./img/inst.png" alt=""></a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 text-[var(--muted)] text-sm">
+          <span class="inline-flex items-center"><img src="./img/m.png" alt=""> hello@skbankdipi.com</span>
+          <span class="inline-flex items-center"><img src="./img/p.png" alt=""> +91 9343 88 2309</span>
+          <span class="inline-flex items-center"><img src="./img/g.png" alt="">Мы по всему миру</span>
+        </div>
+      </div>
+      <div class="footer-bottom flex justify-between items-center gap-5 mt-10 text-xs text-[#b3b3b7] border-t border-[#2d2d2d] pt-6 flex-col md:flex-row">
+        <span>© 2025 DIPI Bank. Все права защищены.</span>
+        <nav class="flex gap-4 mt-3 md:mt-0">
+          <a href="#" class="hover:text-[var(--accent)]">Политика конфиденциальности</a>
+          <a href="#" class="hover:text-[var(--accent)]">Условия обслуживания</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="modal.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>
